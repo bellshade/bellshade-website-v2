@@ -1,0 +1,27 @@
+pull_request_rules:
+  # membuat requirement dari automerge dengan sistem
+  # ketika workflow build passed maka akan dicentang
+  # ketika target pull request ke main maka akan dicentang
+  # ketika dikasih label 'ready-to-merge' akan dicentang
+
+  # ketika requirement telah terpenuhi maka bot akan bekerja
+  # dan pull request secara otomatis akan merge
+  - name: merge ketika check sudah terpenuhi
+    conditions:
+      # di comment karena tidak memiliki unit testing github action
+      # - check-success=build
+      # jika pull request ke main maka akan dicentang
+      - base=main
+      # jika sudah menambahkan label ready to merge maka akan dicentang
+      - label=ready-to-merge
+    actions:
+      # menambahkan komentar jika sudah di merge
+      comment:
+        message: terima kasih atas kontribusinya @{{author}}!
+      # menambahkan label jika sudah di merge
+      label:
+        add: 
+          - sudah dirieview!
+      # metode sistem dari automerge
+      merge:
+        method: merge
