@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build-storybook": "build-storybook",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier -w .",
@@ -11,6 +12,7 @@
     "cypress:headless": "cypress run",
     "e2e": "start-server-and-test start http://localhost:3000 cypress",
     "e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless",
+    "storybook": "start-storybook -p 9009 -c .storybook",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -21,6 +23,12 @@
   "devDependencies": {
     "@commitlint/cli": "^16.0.2",
     "@commitlint/config-conventional": "^16.0.0",
+    "@storybook/addon-actions": "^6.4.13",
+    "@storybook/addon-controls": "^6.4.13",
+    "@storybook/addon-docs": "^6.4.13",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-viewport": "^6.4.13",
+    "@storybook/react": "^6.4.13",
     "autoprefixer": "^10.4.1",
     "cypress": "^9.2.1",
     "eslint": "^8.6.0",
