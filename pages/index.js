@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HomeHeader from "../components/pages/home/HomeHeader";
+import HomeHeader from "@/components/pages/home/HomeHeader";
 
 const Home = () => {
   return (

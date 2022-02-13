@@ -1,4 +1,4 @@
-import DeferNextScript from "../utils/lib/deferNextScript";
+import DeferNextScript from "@/lib/deferNextScript";
 import Document, { Html, Head, Main } from "next/document";
 
 class MyDocument extends Document {
