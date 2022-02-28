@@ -5,7 +5,11 @@ module.exports = {
     "./stories/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        main: "#637FE3",
+      },
+    },
   },
   plugins: [],
 };
