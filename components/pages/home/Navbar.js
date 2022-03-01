@@ -1,29 +1,12 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
-  useEffect(() => {
-    const btn = document.querySelector(".menu-btn");
-    const menu = document.querySelector(".mobile-menu");
+  const [isDarkMode, setisDarkMode] = useState(false);
+  const [navbarResponsive, setNavbarResponsive] = useState(false);
 
-    const lightBtn = document.querySelector(".light-btn");
-    const darkBtn = document.querySelector(".dark-btn");
-
-    lightBtn.addEventListener("click", (hidden) => {
-      darkBtn.classList.toggle("hidden");
-      lightBtn.classList.toggle("hidden");
-    });
-    darkBtn.addEventListener("click", (hidden) => {
-      lightBtn.classList.toggle("hidden");
-      darkBtn.classList.toggle("hidden");
-    });
-
-    btn.addEventListener("click", (hidden) => {
-      menu.classList.toggle("hidden");
-    });
-  }, []);
   return (
     <nav className="bg-white drop-shadow mx-auto">
       <div className="hidden xl:block max-w-[1920px] mb-40 py-5 px-10">
@@ -90,18 +73,22 @@ const Navbar = () => {
           </div>
           <div className="flex items-center space-x-8">
             <div className="flex items-center">
-              <button className="p-2.5 border shadow rounded-lg light-btn ">
-                <Icon icon="clarity:sun-line" width={32} height={32} />
-              </button>
-              <button className="p-2.5 border shadow rounded-lg dark-btn hidden">
-                <Icon icon="clarity:moon-solid" width={32} height={32} />
+              <button
+                onClick={() => setisDarkMode(!isDarkMode)}
+                className="p-2.5 border shadow rounded-lg"
+              >
+                <Icon
+                  icon={isDarkMode ? "clarity:moon-solid" : "clarity:sun-line"}
+                  width={32}
+                  height={32}
+                />
               </button>
             </div>
             <button
               style={{ background: "#637FE3" }}
               className="text-white p-2.5 h-10 rounded-lg flex items-center "
             >
-              Github
+              <a href="https://github.com/bellshade">Github</a>
             </button>
           </div>
         </div>
@@ -119,12 +106,19 @@ const Navbar = () => {
           </div>
         </div>
         <div>
-          <button className="menu-btn">
+          <button
+            onClick={() => setNavbarResponsive(!navbarResponsive)}
+            className="menu-btn"
+          >
             <Icon icon="charm:menu-hamburger" width={32} height={32} />
           </button>
         </div>
       </div>
-      <div className="mobile-menu drop-shadow xl:hidden">
+      <div
+        className={`mobile-menu drop-shadow xl:hidden ${
+          navbarResponsive ? "" : "hidden"
+        }`}
+      >
         <Link href="/">
           <a className="block py-4 px-6 hover:bg-gray-200 hover:text-main">
             <Icon
@@ -171,18 +165,22 @@ const Navbar = () => {
         </Link>
         <div className="flex justify-between space-x-8 py-6 px-6">
           <div className="flex items-center">
-            <button className="p-2.5 border shadow rounded-lg light-btn ">
-              <Icon icon="clarity:sun-line" width={32} height={32} />
-            </button>
-            <button className="p-2.5 border shadow rounded-lg dark-btn hidden">
-              <Icon icon="clarity:moon-solid" width={32} height={32} />
+            <button
+              onClick={() => setisDarkMode(!isDarkMode)}
+              className="p-2.5 border shadow rounded-lg"
+            >
+              <Icon
+                icon={isDarkMode ? "clarity:moon-solid" : "clarity:sun-line"}
+                width={32}
+                height={32}
+              />
             </button>
           </div>
           <button
             style={{ background: "#637FE3" }}
             className="text-white p-2.5 h-10 rounded-lg flex items-center "
           >
-            Github
+            <a href="https://github.com/bellshade">Github</a>
           </button>
         </div>
       </div>
