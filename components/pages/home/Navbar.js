@@ -8,6 +8,18 @@ const Navbar = () => {
     const btn = document.querySelector(".menu-btn");
     const menu = document.querySelector(".mobile-menu");
 
+    const lightBtn = document.querySelector(".light-btn");
+    const darkBtn = document.querySelector(".dark-btn");
+
+    lightBtn.addEventListener("click", (hidden) => {
+      darkBtn.classList.toggle("hidden");
+      lightBtn.classList.toggle("hidden");
+    });
+    darkBtn.addEventListener("click", (hidden) => {
+      lightBtn.classList.toggle("hidden");
+      darkBtn.classList.toggle("hidden");
+    });
+
     btn.addEventListener("click", (hidden) => {
       menu.classList.toggle("hidden");
     });
@@ -77,8 +89,13 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center space-x-8">
-            <div>
-              <Icon icon="clarity:sun-line" width={32} height={32} />
+            <div className="flex items-center">
+              <button className="p-2.5 border shadow rounded-lg light-btn ">
+                <Icon icon="clarity:sun-line" width={32} height={32} />
+              </button>
+              <button className="p-2.5 border shadow rounded-lg dark-btn hidden">
+                <Icon icon="clarity:moon-solid" width={32} height={32} />
+              </button>
             </div>
             <button
               style={{ background: "#637FE3" }}
@@ -153,8 +170,13 @@ const Navbar = () => {
           </a>
         </Link>
         <div className="flex justify-between space-x-8 py-6 px-6">
-          <div>
-            <Icon icon="clarity:sun-line" width={32} height={32} />
+          <div className="flex items-center">
+            <button className="p-2.5 border shadow rounded-lg light-btn ">
+              <Icon icon="clarity:sun-line" width={32} height={32} />
+            </button>
+            <button className="p-2.5 border shadow rounded-lg dark-btn hidden">
+              <Icon icon="clarity:moon-solid" width={32} height={32} />
+            </button>
           </div>
           <button
             style={{ background: "#637FE3" }}
