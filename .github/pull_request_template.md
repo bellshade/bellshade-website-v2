@@ -4,6 +4,14 @@ Closes <!-- Mention nomor issue yang kamu coba tutup dengan PR ini -->
 
 <!-- Deskripsikan rencana implemetasi dan pendekatan yang kamu ambil -->
 
+## Environment
+
+<!-- Deskripsikan sistem operasi apa yang kamu gunakan saat membuat PR ini -->
+
+Saya menggunakan sistem operasi:
+
+- `os` = `linux / windows / macOS`
+
 ## Daftar Tugas
 
 <!-- (Opsional) daftar tugas yang kamu rencanakan akan dikerjakan di pull-request ini.
