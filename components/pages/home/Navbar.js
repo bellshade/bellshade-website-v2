@@ -127,7 +127,7 @@ const Navbar = () => {
               height={24}
               className="inline mr-3"
             />
-            Learning Jurney
+            Learning Journey
           </a>
         </Link>
         <Link href="/">
