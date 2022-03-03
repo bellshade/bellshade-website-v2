@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 const Navbar = () => {
-  const [isDarkMode, setisDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [navbarResponsive, setNavbarResponsive] = useState(false);
 
   return (
@@ -33,7 +33,7 @@ const Navbar = () => {
                     height={24}
                     className="inline mr-3"
                   />
-                  Learning Jurney
+                  Learning Journey
                 </a>
               </Link>
               <Link href="/">
@@ -74,7 +74,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-8">
             <div className="flex items-center">
               <button
-                onClick={() => setisDarkMode(!isDarkMode)}
+                onClick={() => setIsDarkMode(!isDarkMode)}
                 className="p-2.5 border shadow rounded-lg"
               >
                 <Icon
@@ -166,7 +166,7 @@ const Navbar = () => {
         <div className="flex justify-between space-x-8 py-6 px-6">
           <div className="flex items-center">
             <button
-              onClick={() => setisDarkMode(!isDarkMode)}
+              onClick={() => setIsDarkMode(!isDarkMode)}
               className="p-2.5 border shadow rounded-lg"
             >
               <Icon
