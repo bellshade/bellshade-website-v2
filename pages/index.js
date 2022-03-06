@@ -31,7 +31,7 @@ const Home = ({ members }) => {
 
 export default Home;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const BellshadeAPI = "https://api.bellshade.org/";
   const getContents = (url) => fetch(url).then((res) => res.json());
 
@@ -41,5 +41,6 @@ export async function getServerSideProps() {
     props: {
       members: getPublicMembers,
     },
+    revalidate: 432000,
   };
 }
