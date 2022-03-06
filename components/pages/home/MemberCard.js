@@ -1,8 +1,6 @@
 import Image from "next/image";
 
 const MemberCard = ({ login, name, html_url, avatar_url }) => {
-  const dummyImage =
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAAAXNSR0IArs4c6QAAAPtJREFUeF7t0rENAAAMwrDy/9M9wmvYs1jsGgmM6uILEE8QYIAogHkPDBAFMO+BAaIA5j0wQBTAvAcGiAKY98AAUQDzHhggCmDeAwNEAcx7YIAogHkPDBAFMO+BAaIA5j0wQBTAvAcGiAKY98AAUQDzHhggCmDeAwNEAcx7YIAogHkPDBAFMO+BAaIA5j0wQBTAvAcGiAKY98AAUQDzHhggCmDeAwNEAcx7YIAogHkPDBAFMO+BAaIA5j0wQBTAvAcGiAKY98AAUQDzHhggCmDeAwNEAcx7YIAogHkPDBAFMO+BAaIA5j0wQBTAvAcGiAKY98AAUQDzHoiAD0PoAFE/HRk+AAAAAElFTkSuQmCC";
   return (
     <div className="team-card m-5">
       <div
@@ -11,7 +9,7 @@ const MemberCard = ({ login, name, html_url, avatar_url }) => {
       >
         <div className="relative flex justify-center items-center rounded-full overflow-hidden w-20 h-20 shadow-md">
           <Image
-            src={avatar_url ? `${avatar_url}&s=80` : dummyImage}
+            src={avatar_url}
             alt={login}
             layout="fill"
             className="w-full rounded-full"
