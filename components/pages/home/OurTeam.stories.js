@@ -1,5 +1,5 @@
 import React from "react";
-import MemberCard from "./MemberCard";
+import { MemberCard } from "./OurTeam";
 
 const controlTypeText = {
   type: "text",

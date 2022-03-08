@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "@/components/pages/home/Navbar";
 import HomeHeader from "@/components/pages/home/HomeHeader";
-import MemberCard from "@/components/pages/home/MemberCard";
+import OurTeam from "@/components/pages/home/OurTeam";
 
 const Home = ({ members }) => {
   return (
@@ -11,20 +11,7 @@ const Home = ({ members }) => {
       </Head>
       <Navbar />
       <HomeHeader />
-      <section
-        id="team"
-        className="max-w-[942px] m-auto"
-        style={{ width: "90%" }}
-      >
-        <div className="w-full mb-16 md:mb-20 text-center">
-          <h2 className="text-5xl md:text-[67px] font-bold">Meet Our Team</h2>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-          {members.map((member) => {
-            return <MemberCard key={member.login} {...member} />;
-          })}
-        </div>
-      </section>
+      <OurTeam members={members} />
     </div>
   );
 };
