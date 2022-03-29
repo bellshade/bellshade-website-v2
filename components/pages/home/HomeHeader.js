@@ -29,6 +29,7 @@ const HomeHeader = () => {
             alt="Home-Header-Image"
             width={"724px"}
             height={"623px"}
+            draggable="false"
           />
         </div>
       </div>
