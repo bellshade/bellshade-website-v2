@@ -1,4 +1,5 @@
 import Head from "next/head";
+import shared from "@bellshade/shared";
 import Navbar from "@/components/pages/home/Navbar";
 import HomeHeader from "@/components/pages/home/HomeHeader";
 import OurTeam from "@/components/pages/home/OurTeam";
@@ -28,6 +29,6 @@ export async function getStaticProps() {
     props: {
       members: getPublicMembers,
     },
-    revalidate: 432000,
+    revalidate: shared.leaderboard,
   };
 }
