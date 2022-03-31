@@ -24,11 +24,12 @@ export async function getStaticProps() {
   const getContents = (url) => fetch(url).then((res) => res.json());
 
   const getPublicMembers = await getContents(BellshadeAPI);
+  const EXPIRY_TTL_API = shared.constant.EXPIRY_TTL.contributors;
 
   return {
     props: {
       members: getPublicMembers,
     },
-    revalidate: shared.leaderboard,
+    revalidate: EXPIRY_TTL_API,
   };
 }
