@@ -13,6 +13,7 @@ export const MemberCard = ({ login, name, html_url, avatar_url }) => {
             alt={login}
             layout="fill"
             className="w-full rounded-full"
+            draggable="false"
           />
         </div>
         <a
@@ -48,20 +49,20 @@ export const MemberCard = ({ login, name, html_url, avatar_url }) => {
 const OurTeam = ({ members }) => {
   return (
     <section
-        id="team"
-        className="max-w-[942px] m-auto"
-        style={{ width: "90%" }}
-      >
-        <div className="w-full mb-16 md:mb-20 text-center">
-          <h2 className="text-5xl md:text-[67px] font-bold">Meet Our Team</h2>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-          {members.map((member) => {
-            return <MemberCard key={member.login} {...member} />;
-          })}
-        </div>
-      </section>
-  )
-}
+      id="team"
+      className="max-w-[942px] m-auto"
+      style={{ width: "90%" }}
+    >
+      <div className="w-full mb-16 md:mb-20 text-center">
+        <h2 className="text-5xl md:text-[67px] font-bold">Meet Our Team</h2>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        {members.map((member) => {
+          return <MemberCard key={member.login} {...member} />;
+        })}
+      </div>
+    </section>
+  );
+};
 
 export default OurTeam;

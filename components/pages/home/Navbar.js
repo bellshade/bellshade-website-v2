@@ -20,6 +20,7 @@ const Navbar = () => {
                     alt="Bellshade Logo"
                     width={"178px"}
                     height={"48px"}
+                    draggable="false"
                   />
                 </a>
               </Link>
