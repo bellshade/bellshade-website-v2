@@ -42,7 +42,7 @@ const Discord = () => {
           <a
             href="https://discord.gg/wpu"
             style={{background: '#637FE3'}}
-            className="text-white py-2 px-7 rounded inline-block mt-5"
+            className="text-white py-2 px-7 rounded-lg inline-block mt-5"
           >
             Get Started
           </a>

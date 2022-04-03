@@ -8,4 +8,4 @@ const defExport = {
 
 export default defExport
 const Template = (args) => <Discord />
-export const Discord = Template.bind()
+export const DiscordSection = Template.bind()
