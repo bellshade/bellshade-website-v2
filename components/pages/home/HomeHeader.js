@@ -18,7 +18,7 @@ const HomeHeader = () => {
           </p>
           <button
             style={{ background: "#637FE3" }}
-            className="text-white py-2 px-7"
+            className="text-white py-2 px-7 rounded-lg"
           >
             Get Started
           </button>
