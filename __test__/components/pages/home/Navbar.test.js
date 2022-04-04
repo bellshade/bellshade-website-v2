@@ -4,7 +4,7 @@ import Navbar from "@/components/pages/home/Navbar";
 describe("Navigation Bar (Navbar) unit test", () => {
   afterEach(cleanup);
 
-  it("valid navbar", () => {
+  it("Navbar should be showing valid items", () => {
     render(<Navbar />);
 
     expect(screen.getAllByText("Learning Journey")).not.toBeNull();

@@ -39,7 +39,7 @@ const team = [
 describe("Our Team unit test", () => {
   afterEach(cleanup);
 
-  it("render one member properly", () => {
+  it("Member Card component should render one member properly", () => {
     render(<MemberCard {...oneUser} />);
 
     // Apakah gambarnya berhasil terender ke dokumen
@@ -57,7 +57,7 @@ describe("Our Team unit test", () => {
     expect(screen.getByAltText(oneUser.login)).toBeInTheDocument();
   });
 
-  it("render the team users", () => {
+  it("Our Team component should render members from the given data properly", () => {
     render(<OurTeam members={team} />);
 
     // Apakah tulisan "Meet Our Team" ada di dokumen
